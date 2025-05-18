@@ -25,6 +25,9 @@
 ### **Frontend y Estilo**  
 - 🎨 **Tailwind CSS** - Framework de estilos utilitario que permite diseñar interfaces modernas y responsivas con facilidad.  
 
+### **Base de Datos**  
+- 🐬 **MySQL** - Base de datos relacional utilizada para almacenar usuarios, publicaciones, seguidores, likes y más.
+
 > *Nota:* Esta sección se actualizará con más tecnologías conforme me las proporciones. 🛠️
 
 ---
