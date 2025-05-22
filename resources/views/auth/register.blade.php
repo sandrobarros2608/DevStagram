@@ -23,9 +23,9 @@
                     name="name"
                     type="text"
                     placeholder="Tu Nombre"
-                    class="border p-3 w-full rounded-lg bg-white shadow-md @error('nombre') border-red-500 @enderror"
+                    class="border p-3 w-full rounded-lg bg-white shadow-md @error('name') border-red-500 @enderror"
                     {{-- Mantiene el valor ingresado --}}
-                    value="{{old('nombre')}}"
+                    value="{{old('name')}}"
                     />
 
                     @error('name')
@@ -44,7 +44,9 @@
                     name="username"
                     type="text"
                     placeholder="Tu Nombre de Usuario"
-                    class="p-3 w-full rounded-lg bg-white shadow-md"
+                    class="border p-3 w-full rounded-lg bg-white shadow-md @error('username') border-red-500 @enderror"
+                    {{-- Mantiene el valor ingresado --}}
+                    value="{{old('username')}}"
                     />
 
                     @error('username')
@@ -63,7 +65,9 @@
                     name="email"
                     type="text"
                     placeholder="Tu Correo de Registro"
-                    class="p-3 w-full rounded-lg bg-white shadow-md"
+                    class="border p-3 w-full rounded-lg bg-white shadow-md @error('email') border-red-500 @enderror"
+                    {{-- Mantiene el valor ingresado --}}
+                    value="{{old('email')}}"
                     />
 
                     @error('email')
@@ -82,7 +86,7 @@
                     name="password"
                     type="password"
                     placeholder="Tu Contraseña de Registro"
-                    class="p-3 w-full rounded-lg bg-white shadow-md"
+                    class="border p-3 w-full rounded-lg bg-white shadow-md @error('password') border-red-500 @enderror"
                     />
 
                     @error('password')
@@ -101,7 +105,7 @@
                     name="password_confirmation"
                     type="password"
                     placeholder="Repite tu Contraseña"
-                    class="p-3 w-full rounded-lg bg-white shadow-md"
+                    class="border p-3 w-full rounded-lg bg-white shadow-md"
                     />
                 </div>
 

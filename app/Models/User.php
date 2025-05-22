@@ -17,8 +17,11 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+
+     // Los valores que se envian a la base de datos
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
     ];
