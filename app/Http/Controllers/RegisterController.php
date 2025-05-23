@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -30,11 +31,18 @@ class RegisterController extends Controller
         // Crear Registro
         User::create([
             'name' => $request->name,
+            // Revisar migrations add_username
             'username' => Str::slug($request->username),
             'email' => $request->email,
             'password' => $request->password
         ]);
 
+        // Autenticar un usuario
+        if (Auth::attempt([
+            'email' => $request->email,
+            'password' => $request->password
+        ]));
+        
         // Redireccionar
         return redirect()->route('muro');
     }
