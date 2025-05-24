@@ -21,8 +21,10 @@ class LoginController extends Controller
             "password" => 'required'
         ]);
 
+        $remember = $request->filled('remember');
+
         // Autenticacion Falla
-        if (!Auth::attempt($validated)) {
+        if (!Auth::attempt($validated, $remember)) {
             return back()->with('mensaje', 'Credenciales Incorrectas');
         }
 
