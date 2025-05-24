@@ -20,7 +20,8 @@
 
 ### **Backend & Lógica de Aplicación**  
 - 🐘 **PHP** - Lenguaje de programación principal del backend.  
-- ⚡ **Livewire** - Framework full-stack para Laravel que facilita la creación de componentes interactivos sin salir de PHP.  
+- ⚡ **Livewire** - Framework full-stack para Laravel que facilita la creación de componentes interactivos sin salir de PHP.
+- 📦 **Eloquent ORM** - ORM de Laravel para interactuar con la base de datos de forma fluida y elegante.
 
 ### **Frontend y Estilo**  
 - 🎨 **Tailwind CSS** - Framework de estilos utilitario que permite diseñar interfaces modernas y responsivas con facilidad.  
