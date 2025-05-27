@@ -17,4 +17,4 @@ Route::get('/iniciar-sesion', [LoginController::class, 'index'])->name('login');
 Route::post('/iniciar-sesion', [LoginController::class, 'store']);
 Route::post('/cerrar-sesion', [LogoutController::class, 'store'])->name('logout');
 
-Route::get('muro', [PostController::class, 'index'])->name('muro');
+Route::get('/{user:username}', [PostController::class, 'index'])->name('muro');

@@ -25,7 +25,7 @@
 
                 @guest
                     <nav class="flex gap-2 items-center">
-                        <a class="font-bold uppercase text-gray-600 txt-sm" href="#">Iniciar Sesión</a>
+                        <a class="font-bold uppercase text-gray-600 txt-sm" href="{{ route('login') }}">Iniciar Sesión</a>
                         <a class="font-bold uppercase text-gray-600 txt-sm" href="{{ route('registrarse') }}">Crear Cuenta</a>
                     </nav>
                 @endguest
