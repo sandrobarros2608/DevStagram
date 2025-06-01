@@ -17,24 +17,24 @@
         </div>
 
         <div class="md:w-1/2 p-10 bg-white rounded-lg shadow-xl mt-10 md:mt-0">
-            <form action="{{route('registrarse')}}" method="POST" novalidate>
+            <form action="{{route('muro.store')}}" method="POST" novalidate>
                 {{-- Evita ataques XSRF --}}
                 @csrf
                 <div class="mb-5">
-                    <label for="title" class="mb-2 block uppercase text-gray-500 font-bold">
+                    <label for="titulo" class="mb-2 block uppercase text-gray-500 font-bold">
                         Titulo
                     </label>
                     <input
-                    id="title"
-                    name="title"
+                    id="titulo"
+                    name="titulo"
                     type="text"
                     placeholder="Titulo de la Publicación"
-                    class="border p-3 w-full rounded-lg bg-white shadow-md @error('title') border-red-500 @enderror"
+                    class="border p-3 w-full rounded-lg bg-white shadow-md @error('titulo') border-red-500 @enderror"
                     {{-- Mantiene el valor ingresado --}}
-                    value="{{old('title')}}"
+                    value="{{old('titulo')}}"
                     />
 
-                    @error('title')
+                    @error('titulo')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
                             {{ $message }}
                         </p>
@@ -42,17 +42,31 @@
                 </div>
 
                 <div class="mb-5">
-                    <label for="description" class="mb-2 block uppercase text-gray-500 font-bold">
+                    <label for="descripcion" class="mb-2 block uppercase text-gray-500 font-bold">
                         Descripción
                     </label>
                     <textarea
-                    id="description"
-                    name="description"
+                    id="descripcion"
+                    name="descripcion"
                     placeholder="Descripción de la Publicación"
-                    class="border p-3 w-full rounded-lg bg-white shadow-md @error('description') border-red-500 @enderror"
-                    >{{ old('description') }}</textarea>
+                    class="border p-3 w-full rounded-lg bg-white shadow-md @error('descripcion') border-red-500 @enderror"
+                    >{{ old('descripcion') }}</textarea>
 
-                    @error('description')
+                    @error('descripcion')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                </div>
+
+                <div class="mb-5">
+                    <input 
+                    name="imagen"
+                    type="hidden"
+                    
+                    
+                    />
+                    @error('imagen')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
                             {{ $message }}
                         </p>

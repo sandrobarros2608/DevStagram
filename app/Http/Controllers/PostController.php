@@ -26,4 +26,14 @@ class PostController extends Controller
     {
         return view('muro.create');
     }
+
+    public function store(Request $request)
+    {
+        // Validacion
+        $validated = $request->validate([
+            "titulo" => 'required|max:255',
+            "descripcion" => 'required',
+            "imagen" => 'required'
+        ]);
+    }
 }

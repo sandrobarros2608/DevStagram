@@ -8,7 +8,7 @@ const dropzone = new Dropzone('#dropzone', {
     /* Traducir el mensaje */
     dictDefaultMessage: 'Sube aquí tu imagen',
     /* Permita diferentes tipos de archivos de imagen */
-    acceptedFiles: '.png, .jpg, .jpeg, .gif',
+    acceptedFiles: '.png,.jpg,.jpeg,.gif',
     /* Permite eliminar la imagen */
     addRemoveLinks: true,
     /* Traducir el mensaje para borrar la imagen */
@@ -19,18 +19,9 @@ const dropzone = new Dropzone('#dropzone', {
     uploadMultiple: false,
 });
 
-dropzone.on('sending', function(file, xhr, formData) {
-    console.log(file);
-});
-
 dropzone.on('success', function(file, response) {
-    console.log(response);
+    console.log(response.imagen);
+    document.querySelector('[name="imagen"]').value = response.imagen;
 });
 
-dropzone.on('error', function(file, message) {
-    console.log(message);
-});
-
-dropzone.on('removedfile', function() {
-    console.log('Archivo Eliminado');
-});
+dropzone.on('removedfile', function() {});

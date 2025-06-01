@@ -20,6 +20,7 @@ Route::post('/cerrar-sesion', [LogoutController::class, 'store'])->name('logout'
 
 Route::get('/{user:username}', [PostController::class, 'index'])->name('muro');
 Route::get('/muro/create', [PostController::class, 'create'])->name('muro.create');
+Route::post('/muro', [PostController::class, 'store'])->name('muro.store');
 
 Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store');
 ;
