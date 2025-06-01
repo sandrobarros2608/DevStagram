@@ -29,6 +29,6 @@ class LoginController extends Controller
         }
 
         // Si pasa
-        return redirect()->route('muro');
+        return redirect()->route('muro', ['user' => $request->user()->username]);
     }
 }

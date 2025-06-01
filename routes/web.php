@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\PostController;
@@ -18,3 +19,7 @@ Route::post('/iniciar-sesion', [LoginController::class, 'store']);
 Route::post('/cerrar-sesion', [LogoutController::class, 'store'])->name('logout');
 
 Route::get('/{user:username}', [PostController::class, 'index'])->name('muro');
+Route::get('/muro/create', [PostController::class, 'create'])->name('muro.create');
+
+Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store');
+;
