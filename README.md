@@ -22,9 +22,11 @@
 - 🐘 **PHP** - Lenguaje de programación principal del backend.  
 - ⚡ **Livewire** - Framework full-stack para Laravel que facilita la creación de componentes interactivos sin salir de PHP.
 - 📦 **Eloquent ORM** - ORM de Laravel para interactuar con la base de datos de forma fluida y elegante.
+- 🖼️ **Intervention Image** - Librería para manipulación de imágenes en PHP.
 
 ### **Frontend y Estilo**  
 - 🎨 **Tailwind CSS** - Framework de estilos utilitario que permite diseñar interfaces modernas y responsivas con facilidad.  
+- 📤 **Dropzone.js** - Librería para subir archivos con drag and drop, usada para cargar imágenes en las publicaciones.
 
 ### **Base de Datos**  
 - 🐬 **MySQL** - Base de datos relacional utilizada para almacenar usuarios, publicaciones, seguidores, likes y más.
