@@ -17,7 +17,11 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            // Factory = Testing DB
+            'titulo' => $this->faker->sentence(5),
+            'descripcion' => $this->faker->sentence(20),
+            'imagen' => $this->faker->uuid() . 'jpg',
+            'user_id'=> $this->faker->randomElement([1, 2, 3])
         ];
     }
 }
